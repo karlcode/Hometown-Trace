@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <input v-model="msg" />
     
   </div>
 </template>
@@ -10,6 +10,11 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data() {
+    return {
+      msg: "Whatever"
+    }
   }
 }
 </script>
@@ -29,5 +34,12 @@ li {
 }
 a {
   color: #42b983;
+}
+input {
+  min-width: 400px;
+  height: 30px;
+  font-size: 16px;
+  outline: none;
+  border-radius: 10px;
 }
 </style>
